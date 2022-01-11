@@ -1,4 +1,13 @@
 #BalenaLabsResidency 
+LAST UPDATE - 11 Jan 2020
+
+*Notes from Jon*
+
+*IMAGES - to be updated/refined - especially the wiring diagram, I used this as a personal reference when I was putting it together but know it needs work - is there a stylesheet we follow for this kind of thing*
+
+*SOFTWARE - Instructions, feel a little basic/obvious so we may need to cut it down, I also couldn't find how to download direct from balenahub (only fork the fleet?) - but this could well be me not understanding the process fully...*
+
+---
 
 # Sunlamp - Blog - Draft 1
 
@@ -16,6 +25,10 @@ If you think back to seeing the sunrise (or set if you're a night owl) the light
 
 With these issues at the forefront of my mind I created the "sunlamp".
 
+![image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_video_01_cover.png)
+
+[Watch the video](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_fullsequence_720_low.mp4)
+
 An ambient lamp that can be programmed to mimic the natural light cycle of the sun, giving you a subtle reminder of the suns natural transitions through out the day. Gradually illuminating with a soft warm light, before rising to a bright light and repeating the cycle in reverse at the end of the day.
 
 Powered by a Raspberry Pi running on BalenaOS the lamp times and fade durations can be set remotely from anywhere in the world. The lights in the lamp are LED strips containing both Warm White and Bright Light LEDs, meaning that a wider spectrum of white light can be achieved and at the right times.
@@ -27,8 +40,6 @@ My final device houses the LEDs, Raspberry Pi and all necessary electronics into
 When I initially approached this project I hoped that I would be able to use some of the great LEDs drivers available like the Adafruit Fadecandy used on the balena [Christmas Tree.](https://www.balena.io/blog/control-your-christmas-tree-a-raspberry-pi-powered-rgb-led-matrix-v2/) This however, was not going to be the case, as the Fadecandy only supports WS2811 or WS2812 LEDs, which use individually addressable RGB LEDS, unfortunately these do not depict white light as accurately as true white LEDS so I continued my quest.
 
 Not a problem I thought, I'll just go out and find an LED strip that has Warm White and Bright White LEDs, and eventually I did find them but there's a very limited amount of options out there. [These](https://www.amazon.co.uk/dp/B08D6S2H45) are the ones that I went with in the end, with both types of LEDs contained on a single strip. As fas as I could see if you want just the strip with out the power supply and remote you'd have to get the two strips separately through Aliexpress.
-
-~~So, after finding the golden ticket, I thought all would be simple but the quest for the perfect LEDs would throw one more challenge at me. These strips would not work with a driver, so I would have to control them directly from the Raspberry Pi. This turned out not to be too big a deal as the LEDs aren't individual addressable so all I'm doing is turning to lights on and off.~~
 
 ## Want to try it your self?
 
@@ -50,9 +61,7 @@ Not a problem I thought, I'll just go out and find an LED strip that has Warm Wh
 ### Choosing your casing
 
 For my Sunlamp I had decided that even though I was using LED strips I wanted to create something that was closer to a traditional lamp, with a single unit housing the electronics and LEDs and the light being from single source. I knew that I could arrange the LEDs strips in parallel to create a light panel, so all I needed was to find a case. Essentially I needed a nice looking box with a transparent lid. And I found this...
-
-![Image.jpeg](https://res.craft.do/user/full/618a5650-7ab3-61c6-5151-8f1657fc78a2/doc/A894E9D5-38BA-4575-9A78-29ECF3190404/0F11D38B-0A34-4BC1-AE79-FACA59DF6B3D_2/5o9bzbUSNN8DeuZOrpZHblYUT0ZHcqHwNQbB2A1G5YAz/Image.jpeg)
-
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_case.jpeg)
 What is this I hear you ask, it's a fancy wine box of course ;)
 
 Inside this I was able to get all the electronics as well as 8 lengths of 30cm LED strip, plenty to be bright enough for what I needed.
@@ -75,17 +84,20 @@ In this lamp the Raspberry Pi is used to trigger the two sets of LEDs on/off but
 
 For those following along at home here's a diagram of the wiring....
 
-[wiring diagram]
+**DIAGRAM TO BE UPDATED**
+![sunlamp_wiringdiagram_TOBEUPDATED.png](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_wiringdiagram_TOBEUPDATED.png "sunlamp_wiringdiagram_TOBEUPDATED.png")
 
 And this is how mine looked...
 
-[photo of my perfboard]
+![sunlamp_internals.jpg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_internals.jpg "sunlamp_internals.jpg")
 
 #### The light panel
 
 If you're going to be using the LEDs au natural as a strip then you can skip this next bit. Seriously nothing to see here!
 
 If like me you're plan to house the LEDs inside a case you will need to make a light panel. For this I cut a piece of plywood to the internal dimensions of my box and drilled a 5mm hole into one corner to feed the wires back through. Then it's simply a case of sticking down as many strips of LEDs as you want/can fit on the board and soldiering them end to end - one thing to note is that LED strips are directional so the end of one needs to join up with the beginning of the next. The set I bought didn't come with a helpful arrow, oh no that would be too easy, but I followed them round one by and figured it pretty easily.
+
+![sunlamp_lightpanel.jpg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_lightpanel.jpg "sunlamp_lightpanel.jpg")
 
 #### The Raspberry Pi
 
@@ -103,22 +115,29 @@ And there you have it, system's go!
 
 **Steps...**
 
-So, first things first, login to you balena dashboard account.
+So, first things first, login to your balena dashboard account, or if you don't have one create one.
 
-Create fleet, name it something useful - like my_sunlamp
-![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/01_sunlamp_install.png)
+Once in, click on the 'Create fleet' button in the top left to create the fleet your lamp will be part of.
 
-'add device' set it to xxxx, xxxxx, xxxxx download image and
-![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/05_sunlamp_install.png)
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/01_sunlamp_install.png)
 
-flash to the devices SD card (ideally using balena Etcher)plug in and power on lamp, hopefully at this point you should see the lamp as part of your fleet.
-![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/08_sunlamp_install.png)
+After creating your fleet, chose to 'Add device' from the middle box. Here you can set the device type and version, I would also recommend setting the edition to 'Production' and including your wifi details. Once that's done download the image to your machine.
 
-Download sunlamp code from [here](x), push code to device using balena CLI
-![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/11_sunlamp_install.png)
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/05_sunlamp_install.png)
 
-Update any variables
-![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/15_sunlamp_install.png)
+The next step is to flash the image to the devices SD card, ideally using balena Etcher. From there it's a case of plugging in and powering on lamp, and after a minute or so you should at this point you should see the lamp as part of your fleet.
+
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/08_sunlamp_install.png)
+
+At this stage the device still doesn't have the lamp code on it, just the balenaOS, this needs to be upload to the device separately. To do this download sunlamp code from [here](https://github.com/JonJRich/sunlamp/archive/refs/heads/main.zip), and push to the device using balenaCLI.
+
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/11_sunlamp_install.png)
+
+At this point, after rebooting itself, the lamp should be working, but if you want to set the on/off and bright/warm times as well as the fade duration you will need to add them as variables to your fleet.
+
+*note: the variables only contain the 'start' time for each phase as the 'end' time is automatically taken from the start of the next one. For instance LAMP_BRIGHT_OFF = LAMP_WARM_START and so on.*
+
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/15_sunlamp_install.png)
 
 Sit back and enjoy the ambience
 
@@ -139,3 +158,4 @@ On top of that there's so much I'd love to do with the physical design of the la
 
 ^ *Read up on this and expand upon*
 
+---
