@@ -31,7 +31,7 @@ With these issues at the forefront of my mind I created the "sunlamp".
 
 An ambient lamp that can be programmed to mimic the natural light cycle of the sun, giving you a subtle reminder of the suns natural transitions through out the day. Gradually illuminating with a soft warm light, before rising to a bright light and repeating the cycle in reverse at the end of the day.
 
-Powered by a Raspberry Pi running on BalenaOS the lamp times and fade durations can be set remotely from anywhere in the world. The lights in the lamp are LED strips containing both Warm White and Bright Light LEDs, meaning that a wider spectrum of white light can be achieved and at the right times.
+Powered by a Raspberry Pi running on BalenaOS the lamp times and fade duration can be set remotely from anywhere in the world. The lights in the lamp are LED strips containing both Warm White and Bright Light LEDs, meaning that a wider spectrum of white light can be achieved and at the right times.
 
 My final device houses the LEDs, Raspberry Pi and all necessary electronics into a single container creating an effective, and I think pretty good looking, 'lamp'. This however isn't essential, or even especially necessary as you could simply use the LEDs as ambient strips behind you monitor, TV, or a even just large piece of furniture like the headboard of a bed.
 
@@ -49,10 +49,10 @@ Not a problem I thought, I'll just go out and find an LED strip that has Warm Wh
    - SD Card
    - LED light strip
    - 12v Power Supply ( I used the one that came with the LEDs but if buying strips on their own this will be needed)
-   - 2.1mm DC barrel jack adaptor
+   - 2.1mm DC barrel jack adapter
    - N-channel power MOSFET (30V / 60A) × 2
    - Perfboard
-   - 12v to 5v power convertor
+   - 12v to 5v power converter
    - Case*
    - Thin plywood*
 
@@ -76,11 +76,11 @@ And to be completely honest the casing isn't an essential part of the project �
 
 ### Setting up the hardware
 
-The hardware consists of four main parts; the board with the electronics, the Raspberry Pi, the light panel and the power convertor. I'll go through the set up for each in that order.
+The hardware consists of four main parts; the board with the electronics, the Raspberry Pi, the light panel and the power converter. I'll go through the set up for each in that order.
 
 #### Setting up the hardware
 
-In this lamp the Raspberry Pi is used to trigger the two sets of LEDs on/off but as the LED strips I'm using are 12v and the Raspberry Pi uses [CHECK!] logic I needed to have an N-channel power MOSFET for each of the rows of LEDs. These acted as a switch where the low voltage logic could turn the high voltage on and off. In additional to the two transitors I used soldiered a 2.1mmm barrel jack onto my board so that I could use the power supply that came with the LEDs, whilst still being able to unplug it.
+In this lamp the Raspberry Pi is used to trigger the two sets of LEDs on/off but as the LED strips I'm using are 12v and the Raspberry Pi uses [CHECK!] logic I needed to have an N-channel power MOSFET for each of the rows of LEDs. These acted as a switch where the low voltage logic could turn the high voltage on and off. In additional to the two transistors I used soldiered a 2.1mmm barrel jack onto my board so that I could use the power supply that came with the LEDs, whilst still being able to unplug it.
 
 For those following along at home here's a diagram of the wiring....
 
@@ -105,9 +105,9 @@ This ones a pretty short step, attaching the following cables into the Raspberry
 
 #### 12v to 5v convertor
 
-The final step, although not technically necessary is to wire the 12v to 5v connector to the perfboard and connect it to the Raspberry Pi for power. This means that both the LEDs and Raspberry Pi can be powered off of a single input. One thing to note is that the micro USB that comes with the convertor protrudes quite far from the Raspberry Pi, I got round this by mounting mine at a jaunty angle but a neater solution would be to use a right angled adaptor.
+The final step, although not technically necessary is to wire the 12v to 5v connector to the perfboard and connect it to the Raspberry Pi for power. This means that both the LEDs and Raspberry Pi can be powered off of a single input. One thing to note is that the micro USB that comes with the converter protrudes quite far from the Raspberry Pi, I got round this by mounting mine at a jaunty angle but a neater solution would be to use a right angled adapter.
 
-*Note: Once I had everything powered up I was getting undervolted warnings for the Raspberry Pi, as far as I have tested everything seems to be working ok but to be doubly sure a more powerful power superply is possibly a good idea. *
+*Note: Once I had everything powered up I was getting undervolted warnings for the Raspberry Pi, as far as I have tested everything seems to be working ok but to be doubly sure a more powerful power supply is possibly a good idea. *
 
 And there you have it, system's go!
 
@@ -139,7 +139,7 @@ At this point, after rebooting itself, the lamp should be working, but if you wa
 
 ![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/15_sunlamp_install.png)
 
-Sit back and enjoy the ambience
+Sit back and enjoy the ambiance
 
 ....
 
@@ -147,7 +147,7 @@ Sit back and enjoy the ambience
 
 So if you've made it this far first up congratulations, hopefully you also by this point have some nicely glowing LEDs beside you too.
 
-As part of balena residency, and my first foray into software and hardware hacking, I've learnt an awful lot and not simply that I am truly terrible soldiering. Cliched as it sounds this feels like just the beginning, whilst the lamp is functionally sound there are still a lot of features I would love to add, here's just a few:
+As part of balena residency, and my first foray into software and hardware hacking, I've learned an awful lot and not simply that I am truly terrible soldiering. Cliched as it sounds this feels like just the beginning, whilst the lamp is functionally sound there are still a lot of features I would love to add, here's just a few:
 
 - Physical on and off switch
 - Ability to control the brightness of the LEDs
