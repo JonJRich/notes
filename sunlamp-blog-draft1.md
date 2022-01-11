@@ -106,7 +106,7 @@ And there you have it, system's go!
 So, first things first, login to you balena dashboard account.
 
 Create fleet, name it something useful - like my_sunlamp
-[Image 01] (https://github.com/JonJRich/notes/blob/main/assets/01_sunlamp_install.png)
+![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/01_sunlamp_install.png)
 
 'add device' set it to xxxx, xxxxx, xxxxx download image and
 ![[05_sunlamp_install.png]]
