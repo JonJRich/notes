@@ -109,16 +109,16 @@ Create fleet, name it something useful - like my_sunlamp
 ![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/01_sunlamp_install.png)
 
 'add device' set it to xxxx, xxxxx, xxxxx download image and
-![[05_sunlamp_install.png]]
+![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/05_sunlamp_install.png)
 
 flash to the devices SD card (ideally using balena Etcher)plug in and power on lamp, hopefully at this point you should see the lamp as part of your fleet.
-![[08_sunlamp_install.png]]
+![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/08_sunlamp_install.png)
 
 Download sunlamp code from [here](x), push code to device using balena CLI
-![[11_sunlamp_install.png]]
+![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/11_sunlamp_install.png)
 
 Update any variables
-![[15_sunlamp_install.png]]
+![Image.jpeg](https://github.com/JonJRich/notes/blob/main/assets/15_sunlamp_install.png)
 
 Sit back and enjoy the ambience
 
@@ -138,69 +138,4 @@ As part of balena residency, and my first foray into software and hardware hacki
 On top of that there's so much I'd love to do with the physical design of the lamp, somewhat naively I'd assumed that diffusing the LEDs would simply be a case of frosting the glass in the case a little, but turns out it's a little more complicated than that. For future designs I'd like to experiment with mount the LEDs around the internal edges of them to bounce them off an internal back paint, taking advantage of...
 
 ^ *Read up on this and expand upon*
-
----
-
-*Outline*
-
-## The Problem
-
-   - ~~The need for a gradual wake up during dark winter hours~~
-   - ~~The need for the light to mimic the quality/colour of natural light~~
-   - ~~Current version that I own is  very basic~~
-
-## My solution
-
-   - ~~Sunlamp overview~~
-   - ~~Takes LED strip(s) with Warm White and Bright White LEDs and uses a Raspberry Pi to fade them on/off and transition the between Warm White and Bright White to a pre-set schedule.~~
-   - ~~Houses it within a single unit~~
-   - ~~Highlight that although my version is a lamp this could as just as easily power an ambient USB strip (I think this might how more people would use it?)~~
-
-## Difficulties I faced
-
-   - ~~Whilst there are some very clever drivers for LED strips, such as the ada fruit fadecandy, these all designed for a nanopixel or similar LED strip that uses only RGB LEDs, which although they can make 'White' can't give the true WW/BW spectrum~~
-   - ~~Limited availability of WW/BW LED strips~~
-   - ~~Chosen LEDS required 12v power supply so could not be driven from the Raspberry Pi nor could their power be used to directly power it.~~
-
-## ~~Want to try it your self?~~
-
-   ### ~~List of parts~~
-
-   - ~~Raspberry Pi~~
-   - ~~SD Card~~
-   - ~~LED light strip (I used these ones, but others are available where the Warm White and Bright White LEDs are on individual strips, these can be used and the set up would be largely the same)~~
-   - ~~12v Power Supply ( I used the one from the LEDs above but if buying strips on their own this will be needed)~~
-   - ~~2.1mm DC barrel jack~~
-   - ~~N-channel power MOSFET (30V / 60A) × 2~~
-   - ~~Perfboard~~
-   - ~~12v to 5v power convertor~~
-   - ~~Case (see note below)~~
-
-   ### Choosing your casing
-
-   ~~An outline of the case I used, and why. Also note that other cases could be used, and equally the LED strips could be used as they are, mounted behind a cupboard/bed frame to create ambient lighting.~~
-
-   ### Hardware set up
-
-   - ~~Soldier electronics to board~~
-
-      *~~I plan to supply wiring diagram~~*
-
-   - ~~Make 'light panel' (this step can be skipped if using the LED strips without any casing)~~
-
-      *~~Will create illustration/diagram~~*
-
-   - ~~Connect electronics up to Raspberry Pi and 12v-5v convertor~~
-
-      *~~Top level wiring diagram~~*
-
-   ### Software installation
-
-   ~~Still need to test and figure this process out myself...~~
-
-## Future goals
-
-   ~~- Physical on and off switch~~
-   ~~- Ability to control the brightness of the LEDs~~
-   ~~- Web based input for scheduling~~
 
