@@ -85,7 +85,7 @@ In this lamp the Raspberry Pi is used to trigger the two sets of LEDs on/off but
 For those following along at home here's a diagram of the wiring....
 
 **DIAGRAM TO BE UPDATED**
-![sunlamp_wiringdiagram_TOBEUPDATED.png](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_wiringdiagram_TOBEUPDATED.png "sunlamp_wiringdiagram_TOBEUPDATED.png")
+![sunlamp_blog_WiringDiagram.png](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_blog_WiringDiagram.png")
 
 And this is how mine looked...
 
