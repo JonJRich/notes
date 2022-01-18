@@ -1,11 +1,5 @@
-#BalenaLabsResidency 
-LAST UPDATE - 11 Jan 2020
-
-*Notes from Jon*
-
-*IMAGES - to be updated/refined - especially the wiring diagram, I used this as a personal reference when I was putting it together but know it needs work - is there a stylesheet we follow for this kind of thing*
-
-*SOFTWARE - Instructions, feel a little basic/obvious so we may need to cut it down, I also couldn't find how to download direct from balenahub (only fork the fleet?) - but this could well be me not understanding the process fully...*
+LAST UPDATE - 18 Jan 2020
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_blog_header.png)
 
 ---
 
