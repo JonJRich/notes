@@ -25,6 +25,7 @@ If you think back to seeing the sunrise (or set if you're a night owl) the light
 
 With these issues at the forefront of my mind I created the "sunlamp".
 
+![Image.jpeg](https://raw.githubusercontent.com/JonJRich/notes/main/assets/sunlamp_splitview.jpg)
 [Watch the video](https://vimeo.com/667266121)
 
 An ambient lamp that can be programmed to mimic the natural light cycle of the sun, giving you a subtle reminder of the suns natural transitions through out the day. Gradually illuminating with a soft warm light, before rising to a bright light and repeating the cycle in reverse at the end of the day.
